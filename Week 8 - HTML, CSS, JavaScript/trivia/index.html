@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+            function checkAnswer(answer){
+                if (answer=='canberra') {
+                    document.getElementById('canberra').style.backgroundColor = "green";
+                    document.getElementById('canberra').style.color = "white";
+                    document.getElementById('correct').style.display = 'block';
+                    document.getElementById('incorrect').style.display = 'none';
+                } else {
+                    document.getElementById(answer).style.backgroundColor = "red";
+                    document.getElementById(answer).style.color = "white";
+                    document.getElementById('correct').style.display = 'none';
+                    document.getElementById('incorrect').style.display = 'block';
+                }
+            }
+            function checkresponse(){
+                let x = document.getElementById('response').value.toLowerCase()
+                if(x=='melbourne')
+                {
+                    document.querySelectorAll('input[type="text"]')[0].style.backgroundColor = 'green';
+                    document.querySelectorAll('input[type="text"]')[0].style.color = "white";
+                    document.getElementById('true').style.display = 'block';
+                    document.getElementById('false').style.display = 'none';
+                } else {
+                    document.querySelectorAll('input[type="text"]')[0].style.backgroundColor = 'red';
+                    document.querySelectorAll('input[type="text"]')[0].style.color = "white";
+                    document.getElementById('true').style.display = 'none';
+                    document.getElementById('false').style.display = 'block';
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                <h3>What is the capital city of Australia?</h3>
+                <button id='sydney' onclick="checkAnswer('sydney')">Sydney</button>
+                <button id='canberra' onclick="checkAnswer('canberra')">Canberra</button>
+                <button id='melbourne' onclick="checkAnswer('melbourne')">Melbourne</button>
+                <p id='correct'>Correct!</p>
+                <p id='incorrect'>Incorrect</p>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <h3>What is the largest city in Australia ?</h3>
+                <input type="text" id="response">
+                <button onclick="checkresponse()">Check Answer</button>
+                <p id='true'>Correct</p>
+                <p id='false'>Incorrect!</p>
+            </div>
+        </div>
+    </body>
+</html>

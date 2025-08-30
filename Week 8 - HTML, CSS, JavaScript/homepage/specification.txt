@@ -1,0 +1,28 @@
+
+HTML Tags (10):
+
+<meta>
+<link>
+<nav>
+<div>
+<form>
+<input>
+<ul>
+<li>
+<h3>
+<p>
+
+
+CSS Properties (5):
+
+position
+bottom
+width
+height
+background-color
+
+JavaScript Usage: handling form submission
+When the submit button is clicked, JavaScript retrieves the value from the email input field and displays a success message in a hidden div, updating the placeholder text with the entered email.
+
+Bootstrap Usage: style the navbar, form, buttons, and footer and providing a responsive layout and predefined styles for elements
+

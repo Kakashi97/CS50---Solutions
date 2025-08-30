@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+    <div class="table-responsive">
+        <table class="table">
+            <thead class="table-dark">
+                <tr>
+                  <th>Stocks</th>
+                  <th>Current price</th>
+                  <th>Number of shares owned</th>
+                  <th>Total value</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for elt in portfolio %}
+                <tr>
+                  <td>{{ elt["Stocks"] }}</td>
+                  <td>{{ elt["Current price"] }}</td>
+                  <td>{{ elt["Number of shares"] }}</td>
+                  <td>{{ elt["Total value"] }}</td>
+                </tr>
+                {% endfor %}
+              </tbody>
+        </table>
+    </div>
+    <div class="container p-5 my-5 bg-dark text-white">
+        <h1>Current cash balance</h1>
+        <p>{{ cash }}</p>
+    </div>
+    <div class="container p-5 my-5 bg-primary text-white">
+        <h1>Grand total</h1>
+        <p>{{ grand_total }}</p>
+    </div>
+{% endblock %}

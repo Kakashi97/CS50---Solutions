@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+    <div class="table-responsive">
+        <table class="table">
+            <thead class="table-dark">
+                <tr>
+                  <th>Stocks</th>
+                  <th>Type</th>
+                  <th>Purchase/Sale Price</th>
+                  <th>Number of shares bought/sold</th>
+                  <th>Time</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for transaction in transactions %}
+                <tr class="{% if transaction['type'] == 'Purchase' %}table-success{% elif transaction['type'] == 'Sell' %}table-danger{% endif %}">
+                    <td>{{ transaction["symbol"] }}</td>
+                    <td >{{ transaction["type"] }}</td>
+                    <td>{{ transaction["price"] }}</td>
+                    <td>{{ transaction["number"] }}</td>
+                    <td>{{ transaction["date"] }}</td>
+                </tr>
+                {% endfor %}
+              </tbody>
+        </table>
+    </div>
+{% endblock %}
