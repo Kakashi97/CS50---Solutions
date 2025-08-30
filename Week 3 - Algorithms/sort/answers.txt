@@ -1,0 +1,24 @@
+sort1 uses: Bubble Sort
+reversed 0m0.264s
+random 0m0.312s
+sorted 0m0.142s
+
+How do you know?:
+Performs better on sorted text values compared to sort3 (best case scenario)
+
+sort2 uses: Merge sort
+reversed 0m0.065s
+random 0m0.062s
+sorted 0m0.074s
+How do you know?:
+1- Faster runtime than the other two
+2- Almost the same runtime regardless of the arrangement of the text values.
+
+sort3 uses:Selection sort
+reversed 0m0.136s
+random  0m0.147s
+sorted 0m0.141s
+How do you know?:
+1- More runtime than sort1
+2- Same runtime for random and sorted text values
+
